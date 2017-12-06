@@ -13,6 +13,8 @@ class ChatTableViewCell: UITableViewCell {
     
     @IBOutlet weak var messageTextLabel: UILabel!
     
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

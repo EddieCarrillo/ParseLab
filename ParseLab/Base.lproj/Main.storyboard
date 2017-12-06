@@ -101,33 +101,41 @@
                                     <action selector="onSendTapped:" destination="vaQ-d2-sGI" eventType="touchUpInside" id="ifx-WC-Gr5"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="418-Ow-awf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="418-Ow-awf">
                                 <rect key="frame" x="0.0" y="122" width="375" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="f1p-bt-huc" customClass="ChatTableViewCell" customModule="ParseLab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="101" id="f1p-bt-huc" customClass="ChatTableViewCell" customModule="ParseLab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f1p-bt-huc" id="Awm-b3-fRu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lp-d6-Kra">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="20.5"/>
+                                                    <rect key="frame" x="16" y="29" width="134" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3z-BU-bT3">
+                                                    <rect key="frame" x="16" y="0.0" width="82" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9lp-d6-Kra" firstAttribute="top" secondItem="Awm-b3-fRu" secondAttribute="top" id="dB7-aU-mDN"/>
-                                                <constraint firstItem="9lp-d6-Kra" firstAttribute="leading" secondItem="Awm-b3-fRu" secondAttribute="leading" constant="8" id="eO7-WC-U3a"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9lp-d6-Kra" secondAttribute="bottom" constant="8" id="jYd-Gs-QeP"/>
-                                                <constraint firstAttribute="trailing" secondItem="9lp-d6-Kra" secondAttribute="trailing" constant="8" id="nIj-Za-EKP"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="9lp-d6-Kra" secondAttribute="bottom" constant="16" id="2lZ-l4-BbL"/>
+                                                <constraint firstItem="9lp-d6-Kra" firstAttribute="top" secondItem="J3z-BU-bT3" secondAttribute="bottom" constant="8" id="7tX-yb-qx5"/>
+                                                <constraint firstItem="J3z-BU-bT3" firstAttribute="leading" secondItem="Awm-b3-fRu" secondAttribute="leading" constant="16" id="Qzt-rf-9hT"/>
+                                                <constraint firstItem="J3z-BU-bT3" firstAttribute="top" secondItem="Awm-b3-fRu" secondAttribute="top" id="cUQ-56-VOW"/>
+                                                <constraint firstItem="9lp-d6-Kra" firstAttribute="leading" secondItem="Awm-b3-fRu" secondAttribute="leadingMargin" constant="8" id="cle-dP-CcD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageTextLabel" destination="9lp-d6-Kra" id="n7k-ZZ-oEk"/>
+                                            <outlet property="usernameLabel" destination="J3z-BU-bT3" id="vMY-8w-qRe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -28,6 +28,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let chatMessage = PFObject(className: "Message")
         
         chatMessage["text"] = chatMessageTextField.text ?? ""
+        chatMessage["user"] = PFUser.current()
+        
+        
         
         
         chatMessage.saveInBackground { (success: Bool, error: Error?) in
@@ -58,9 +61,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let message = self.messages[indexPath.row]
         
-        let messageText = message["text"] as?   String
+        if let messageText = message["text"] as? String {
+            messageCell.messageTextLabel?.text = messageText
+        }
         
-        messageCell.messageTextLabel?.text = messageText
+        if let user = message["user"] as? PFUser {
+            //User found!!!!
+            messageCell.usernameLabel.text = user.username
+        }else {
+           //No user found, set default username
+            messageCell.usernameLabel.text = "GATORADE!"
+        
+        }
+        
+        
         
         
         return messageCell
@@ -70,6 +84,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func onTimer(){
       // Add code to be run periodically
         let query = PFQuery(className: "Message")
+        query.includeKey("user")
+        
+        //Works correctly for finding my posts
+       // query.whereKey("user", equalTo: PFUser.current())
         
         query.findObjectsInBackground { (messageObjects: [PFObject]?, error :Error?) in
             if let error = error {
