@@ -15,10 +15,6 @@ class LoginViewController: UIViewController {
     let loginSegue = "LoginSegue"
     
     
-    
-    
-    
-    
     @IBOutlet weak var usernameTextField: UITextField!
     
     
@@ -35,16 +31,24 @@ class LoginViewController: UIViewController {
             let okActon = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction) in
                  //Don't really have to do anything but notify the user.
             })
+            alertController.addAction(okActon)
             
             return
         }
         
         guard let password = self.passwordTextField.text else {
             print("The password text field box is empty")
+            
+            let alertController = UIAlertController(title: "Empty Field", message: "Password field is empty", preferredStyle:UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction) in
+                //Do nothing but dismiss
+            })
+            
+            alertController.addAction(okAction)
            return
         }
     
-        
+        //If everything is good then register the user
         self.registerUser(with: username, and: password)
         
       
@@ -81,6 +85,8 @@ class LoginViewController: UIViewController {
         
         guard let password = self.passwordTextField.text else {
             print("The password text field box is empty")
+            let alertController = UIAlertController(title: "Missing Password", message: "The password text field is empty", preferredStyle: UIAlertControllerStyle.alert)
+            
             return
         }
         
@@ -116,7 +122,7 @@ class LoginViewController: UIViewController {
                 //Do some error handling ... .
                 print("[ERROR] \(error.localizedDescription)")
             }else {
-                
+                self.performSegue(withIdentifier: self.loginSegue, sender: nil)
                 //React appropriately to successful register.
                print("User Registered successfully")
             }
@@ -137,8 +143,14 @@ class LoginViewController: UIViewController {
             }else {
                print("The user logged in successfully!")
                 //Deal with succesfully login here. (Next view controller)
+                self.performSegue(withIdentifier: self.loginSegue, sender: nil)
             }
         }
+        
+        
+        
+        
+        
         
         
     }

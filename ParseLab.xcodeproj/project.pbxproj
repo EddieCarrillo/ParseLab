@@ -14,6 +14,7 @@
 		1F6896A91FD6110100253CBD /* ParseLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896A81FD6110100253CBD /* ParseLabTests.swift */; };
 		1F6896B41FD6148500253CBD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1F6896B31FD6148500253CBD /* Podfile */; };
 		1F6896B81FD6182A00253CBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896B71FD6182A00253CBD /* LoginViewController.swift */; };
+		1F6896BA1FD77C9E00253CBD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896B91FD77C9E00253CBD /* ChatViewController.swift */; };
 		66F41DC30A1D1295E3F71725 /* Pods_ParseLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CC10FBFEA48F9424E50EEE /* Pods_ParseLab.framework */; };
 		A4DC283AB53917790816AC83 /* Pods_ParseLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4013DEC5FD201CD4F3A459C2 /* Pods_ParseLabTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		1F6896AA1FD6110100253CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6896B31FD6148500253CBD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1F6896B71FD6182A00253CBD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F6896B91FD77C9E00253CBD /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2303604032A426A12194255E /* Pods-ParseLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseLabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseLabTests/Pods-ParseLabTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4013DEC5FD201CD4F3A459C2 /* Pods_ParseLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6468E78DCA391960459E4F9 /* Pods-ParseLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseLab/Pods-ParseLab.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				1F6896B71FD6182A00253CBD /* LoginViewController.swift */,
+				1F6896B91FD77C9E00253CBD /* ChatViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6896B81FD6182A00253CBD /* LoginViewController.swift in Sources */,
+				1F6896BA1FD77C9E00253CBD /* ChatViewController.swift in Sources */,
 				1F6896941FD6110100253CBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
