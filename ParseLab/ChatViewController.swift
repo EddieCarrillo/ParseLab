@@ -58,9 +58,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let message = self.messages[indexPath.row]
         
-        let messageText = message["text"] as? String
+        let messageText = message["text"] as?   String
         
-        messageCell.textLabel?.text = messageText
+        messageCell.messageTextLabel?.text = messageText
         
         
         return messageCell
@@ -95,6 +95,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.tableView.estimatedRowHeight = 50
         
         initTimer()
 
