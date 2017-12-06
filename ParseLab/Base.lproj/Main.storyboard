@@ -75,7 +75,7 @@
         <!--Chat View Controller-->
         <scene sceneID="SGs-j3-KmP">
             <objects>
-                <viewController id="vaQ-d2-sGI" customClass="ChatViewController" customModule="ParseLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="vaQ-d2-sGI" customClass="ChatViewController" customModule="ParseLab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eG5-fx-J0D"/>
                         <viewControllerLayoutGuide type="bottom" id="mhC-1r-c7G"/>

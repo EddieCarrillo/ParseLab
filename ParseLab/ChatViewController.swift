@@ -75,8 +75,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         
-        
-        
         return messageCell
         
     }
